@@ -20,10 +20,14 @@ And include extension.neon in your project's PHPStan config:
 ```
 includes:
     - vendor/oneup/phpstan-contao/extension.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
 
 parameters:
     contao:
         services_yml_path: %currentWorkingDirectory%/src/Resources/config/services.yml
+
+    symfony:
+        container_xml_path: %currentWorkingDirectory%/vendor/oneup/phpstan-contao/var/cache/dev/appDevPHPStanProjectContainer.xml
 ```
 
 ## Limitations
