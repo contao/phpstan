@@ -1,0 +1,11 @@
+services:
+    -
+        class: Contao\CoreBundle\PHPStan\Type\Contao\ContainerInterfaceDynamicReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Contao\CoreBundle\PHPStan\Type\Contao\ContainerAwareInterfaceDynamicReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    - Contao\CoreBundle\PHPStan\Contao\ServiceMap(%contao.services_yml_path%)
