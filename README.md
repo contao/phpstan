@@ -20,6 +20,7 @@ And include extension.neon in your project's PHPStan config:
 ```
 includes:
     - vendor/oneup/phpstan-contao/extension.neon
+
 parameters:
     contao:
         services_yml_path: %currentWorkingDirectory%/src/Resources/config/services.yml
