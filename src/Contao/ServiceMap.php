@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Oneup\PHPStan\Contao;
 
+use Oneup\PHPStan\AppKernel;
 use PhpParser\Node\Expr;
 use PHPStan\Analyser\Scope;
 use PHPStan\Type\TypeUtils;
+use Symfony\Component\Debug\Debug;
 use Symfony\Component\Yaml\Yaml;
 
 final class ServiceMap
@@ -65,6 +67,9 @@ final class ServiceMap
                 );
             }
         }
+
+        // Create a throw-away-kernel to have all Symfony services defined in the container
+        $this->createKernel();
     }
 
     public function getService(string $id): ?Service
@@ -77,5 +82,13 @@ final class ServiceMap
         $strings = TypeUtils::getConstantStrings($scope->getType($node));
 
         return 1 === \count($strings) ? $strings[0]->getValue() : null;
+    }
+
+    private function createKernel(): void
+    {
+        Debug::enable();
+
+        $kernel = new AppKernel('dev', true);
+        $kernel->boot();
     }
 }

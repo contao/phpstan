@@ -23,8 +23,6 @@ includes:
 parameters:
     contao:
         services_yml_path: %currentWorkingDirectory%/src/Resources/config/services.yml
-
-    bootstrap: %currentWorkingDirectory%/vendor/oneup/phpstan-contao/app/bootstrap.php
 ```
 
 ## Limitations

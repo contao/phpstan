@@ -1,0 +1,38 @@
+imports:
+    - { resource: "../../vendor/contao/manager-bundle/src/Resources/skeleton/app/security.yml" }
+
+parameters:
+    secret: 1145510ecdab02fd861cf3aef043c693db9f6777
+    locale: en
+    debug.container.dump: true
+
+framework:
+    translator: { fallbacks: ["%locale%"] }
+    default_locale:  "%locale%"
+
+    router:
+        resource: "contao_manager.routing_loader:loadFromPlugins"
+        type: service
+        strict_requirements: "%kernel.debug%"
+
+    csrf_protection: ~
+    secret: "%secret%"
+
+    templating:
+        engines: ['twig']
+
+    session:
+        handler_id: ~
+
+doctrine:
+    dbal:
+        default_connection: default
+
+fos_http_cache:
+    proxy_client:
+        symfony:
+            use_kernel_dispatcher: true
+    cache_manager:
+        enabled: true
+    tags:
+        enabled: true

@@ -8,4 +8,14 @@ services:
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 
+    -
+        class: Oneup\PHPStan\Type\Contao\ContaoFrameworkDynamicReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    -
+        class: Oneup\PHPStan\Reflection\Contao\BackendTemplateClassReflectionExtension
+        tags:
+            - phpstan.broker.propertiesClassReflectionExtension
+
     - Oneup\PHPStan\Contao\ServiceMap(%contao.services_yml_path%)
