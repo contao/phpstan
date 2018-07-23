@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PHPStan\Contao;
+namespace Oneup\PHPStan\Contao;
 
 final class Service
 {

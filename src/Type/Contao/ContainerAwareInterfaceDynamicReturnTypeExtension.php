@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PHPStan\Type\Contao;
+namespace Oneup\PHPStan\Type\Contao;
 
+use Oneup\PHPStan\Contao\ServiceMap;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
-use PHPStan\Contao\ServiceMap;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
