@@ -1,5 +1,5 @@
 imports:
-    - { resource: "../../../../../../vendor/contao/manager-bundle/src/Resources/skeleton/app/security.yml" }
+    - { resource: "security.yml" }
 
 parameters:
     secret: 1145510ecdab02fd861cf3aef043c693db9f6777
