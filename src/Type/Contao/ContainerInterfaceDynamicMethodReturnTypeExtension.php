@@ -7,7 +7,7 @@ namespace Oneup\PHPStan\Type\Contao;
 use PHPStan\Reflection\MethodReflection;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class ContainerInterfaceDynamicMethodReturnTypeExtension extends AbstractDynamicMethodReturnTypeExtension
+class ContainerInterfaceDynamicMethodReturnTypeExtension extends AbstractDynamicMethodReturnTypeFromServiceHelperExtension
 {
     public function getClass(): string
     {

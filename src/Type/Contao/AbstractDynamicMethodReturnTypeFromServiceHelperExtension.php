@@ -12,16 +12,16 @@ use PHPStan\Type\DynamicMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
 
-abstract class AbstractDynamicMethodReturnTypeExtension implements DynamicMethodReturnTypeExtension
+abstract class AbstractDynamicMethodReturnTypeFromServiceHelperExtension implements DynamicMethodReturnTypeExtension
 {
     /**
      * @var ServiceHelper
      */
-    protected $serviceMap;
+    protected $serviceHelper;
 
-    public function __construct(ServiceHelper $contaoServiceMap)
+    public function __construct(ServiceHelper $contaoServiceHelper)
     {
-        $this->serviceMap = $contaoServiceMap;
+        $this->serviceHelper = $contaoServiceHelper;
     }
 
     public function getTypeFromMethodCall(MethodReflection $methodReflection, MethodCall $methodCall, Scope $scope): Type
@@ -36,7 +36,7 @@ abstract class AbstractDynamicMethodReturnTypeExtension implements DynamicMethod
 
         $serviceId = ServiceHelper::getServiceIdFromNode($methodCall->args[0]->value, $scope);
 
-        if (null !== $serviceId && null !== $service = $this->serviceMap->getService($serviceId)) {
+        if (null !== $serviceId && null !== $service = $this->serviceHelper->getService($serviceId)) {
             return new ObjectType($service->getClass());
         }
 
