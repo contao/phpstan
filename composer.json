@@ -8,11 +8,6 @@
       "homepage": "https://github.com/bytehead"
     }
   ],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true
-  },
   "require": {
     "php": "^7.1",
     "contao/core-bundle": "^4.5.999",
@@ -27,14 +22,21 @@
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.12"
   },
+  "config": {
+    "sort-packages": true
+  },
   "autoload": {
     "psr-4": {
       "Oneup\\PHPStan\\": "src/"
     }
   },
   "autoload-dev": {
-    "classmap": ["tests/"]
+    "classmap": [
+      "tests/"
+    ]
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "support": {
     "email": "hello@1up.io",
     "issues": "https://github.com/1up-lab/phpstan-contao/issues",
