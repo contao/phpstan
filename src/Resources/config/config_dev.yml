@@ -4,7 +4,6 @@ imports:
 parameters:
     secret: 1145510ecdab02fd861cf3aef043c693db9f6777
     locale: en
-    debug.container.dump: true
 
 framework:
     translator: { fallbacks: ["%locale%"] }
