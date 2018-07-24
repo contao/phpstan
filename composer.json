@@ -15,7 +15,9 @@
     "phpstan/phpstan": "^0.10",
     "phpstan/phpstan-symfony": "^0.10",
     "symfony/debug": "^4.1",
-    "symfony/monolog-bundle": "^3.3"
+    "symfony/monolog-bundle": "^3.3",
+    "symfony/monolog-bridge": "^3.0 || ^4.0",
+    "symfony/templating": "^3.1 || ^4.0"
   },
   "require-dev": {
     "contao/core-bundle": "^4.5.999",
