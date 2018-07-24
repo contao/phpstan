@@ -1,15 +1,15 @@
 services:
     -
-        class: Oneup\PHPStan\Type\Contao\ContainerInterfaceDynamicReturnTypeExtension
+        class: Oneup\PHPStan\Type\Contao\ContainerInterfaceDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
-        class: Oneup\PHPStan\Type\Contao\ContainerAwareInterfaceDynamicReturnTypeExtension
+        class: Oneup\PHPStan\Type\Contao\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 
     -
-        class: Oneup\PHPStan\Type\Contao\ContaoFrameworkDynamicReturnTypeExtension
+        class: Oneup\PHPStan\Type\Contao\ContaoFrameworkDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 
@@ -18,4 +18,4 @@ services:
         tags:
             - phpstan.broker.propertiesClassReflectionExtension
 
-    - Oneup\PHPStan\Contao\ServiceMap(%contao.services_yml_path%)
+    - Oneup\PHPStan\Contao\ServiceHelper(%contao.services_yml_path%)

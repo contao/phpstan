@@ -11,7 +11,7 @@ use PHPStan\Type\TypeUtils;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\Yaml\Yaml;
 
-final class ServiceMap
+final class ServiceHelper
 {
     /**
      * @var Service[]

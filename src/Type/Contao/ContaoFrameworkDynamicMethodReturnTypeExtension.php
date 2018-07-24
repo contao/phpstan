@@ -14,7 +14,7 @@ use PHPStan\Type\DynamicMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
 
-class ContaoFrameworkDynamicReturnTypeExtension implements DynamicMethodReturnTypeExtension
+class ContaoFrameworkDynamicMethodReturnTypeExtension implements DynamicMethodReturnTypeExtension
 {
     public function getClass(): string
     {
