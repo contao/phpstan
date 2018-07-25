@@ -35,6 +35,7 @@ class ContaoTestCaseDynamicMethodReturnTypeExtension implements DynamicMethodRet
             $value = $argument->value;
 
             if ($value instanceof ClassConstFetch) {
+                // see https://medium.com/@ondrejmirtes/union-types-vs-intersection-types-fd44a8eacbb
                 return new IntersectionType([
                     new ObjectType((string) $value->class),
                     new ObjectType(MockObject::class),
