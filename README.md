@@ -7,6 +7,10 @@ This extension provides following features:
 
 * Provides correct return types for Contao services.
 
+[![Author](https://img.shields.io/badge/author-@1upgmbh-blue.svg?style=flat-square)](https://twitter.com/1upgmbh)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Total Downloads](https://img.shields.io/packagist/dt/oneup/phpstan-contao.svg?style=flat-square)](https://packagist.org/packages/oneup/phpstan-contao)
+
 ## Usage
 
 To use this extension, require it in [Composer](https://getcomposer.org/):
