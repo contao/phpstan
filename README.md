@@ -9,6 +9,7 @@ This extension provides following features:
 
 [![Author](https://img.shields.io/badge/author-@1upgmbh-blue.svg?style=flat-square)](https://twitter.com/1upgmbh)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Travis CI](https://travis-ci.org/1up-lab/phpstan-contao.svg?branch=master)](https://travis-ci.org/1up-lab/phpstan-contao)
 [![Total Downloads](https://img.shields.io/packagist/dt/oneup/phpstan-contao.svg?style=flat-square)](https://packagist.org/packages/oneup/phpstan-contao)
 
 ## Usage
