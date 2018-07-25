@@ -8,6 +8,7 @@ use Contao\CoreBundle\Framework\ContaoFramework;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr\ClassConstFetch;
 use PhpParser\Node\Expr\MethodCall;
+use PhpParser\Node\Name;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
@@ -32,7 +33,7 @@ class ContaoFrameworkDynamicMethodReturnTypeExtension implements DynamicMethodRe
         foreach ($methodCall->args as $argument) {
             $value = $argument->value;
 
-            if ($value instanceof ClassConstFetch) {
+            if ($value instanceof ClassConstFetch && $value->class instanceof Name) {
                 return new ObjectType((string) $value->class);
             }
         }

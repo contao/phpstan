@@ -8,6 +8,7 @@ use Contao\TestCase\ContaoTestCase;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr\ClassConstFetch;
 use PhpParser\Node\Expr\MethodCall;
+use PhpParser\Node\Name;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
@@ -34,7 +35,7 @@ class ContaoTestCaseDynamicMethodReturnTypeExtension implements DynamicMethodRet
         foreach ($methodCall->args as $argument) {
             $value = $argument->value;
 
-            if ($value instanceof ClassConstFetch) {
+            if ($value instanceof ClassConstFetch && $value->class instanceof Name) {
                 // see https://medium.com/@ondrejmirtes/union-types-vs-intersection-types-fd44a8eacbb
                 return new IntersectionType([
                     new ObjectType((string) $value->class),

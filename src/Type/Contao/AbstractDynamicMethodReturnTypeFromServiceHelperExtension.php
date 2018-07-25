@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Oneup\PHPStan\Type\Contao;
 
+use Oneup\PHPStan\Contao\Service;
 use Oneup\PHPStan\Contao\ServiceHelper;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
@@ -36,8 +37,12 @@ abstract class AbstractDynamicMethodReturnTypeFromServiceHelperExtension impleme
 
         $serviceId = ServiceHelper::getServiceIdFromNode($methodCall->args[0]->value, $scope);
 
-        if (null !== $serviceId && null !== $service = $this->serviceHelper->getService($serviceId)) {
-            return new ObjectType($service->getClass());
+        if (null !== $serviceId) {
+            $service = $this->serviceHelper->getService($serviceId);
+
+            if ($service instanceof Service && \is_string($service->getClass())) {
+                return new ObjectType($service->getClass());
+            }
         }
 
         $arg = $methodCall->args[0]->value;
