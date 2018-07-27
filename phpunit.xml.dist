@@ -20,6 +20,8 @@
             <directory>./src</directory>
             <exclude>
                 <directory>./src/Resources</directory>
+                <!-- exclude files with symbols and side-effects -->
+                <file>./src/AppKernel.php</file>
             </exclude>
         </whitelist>
     </filter>
