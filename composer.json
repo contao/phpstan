@@ -10,6 +10,8 @@
     ],
     "require": {
         "php": "^7.1",
+        "friendsofsymfony/http-cache": "^2.4",
+        "friendsofsymfony/http-cache-bundle": "^2.3",
         "phpstan/phpstan": "^0.10.2",
         "phpstan/phpstan-symfony": "^0.10",
         "symfony/debug": "^4.1",
