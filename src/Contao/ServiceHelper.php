@@ -29,7 +29,7 @@ final class ServiceHelper
             $services = $yml['services'];
 
             foreach ($services as $serviceId => $parameters) {
-                if (!array_key_exists('class', $parameters)) {
+                if (\is_array($parameters) && !array_key_exists('class', $parameters)) {
                     continue;
                 }
 
