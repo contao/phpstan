@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan;
+namespace Contao\PHPStan;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;

@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Contao;
+namespace Contao\PHPStan;
 
-use Oneup\PHPStan\AppKernel;
 use PhpParser\Node\Expr;
 use PHPStan\Analyser\Scope;
 use PHPStan\Type\TypeUtils;

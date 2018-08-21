@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Type\Contao;
+namespace Contao\PHPStan\Type;
 
-use Oneup\PHPStan\Contao\Service;
-use Oneup\PHPStan\Contao\ServiceHelper;
+use Contao\PHPStan\Service;
+use Contao\PHPStan\ServiceHelper;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;

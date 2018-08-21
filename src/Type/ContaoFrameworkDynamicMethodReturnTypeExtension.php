@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Type\Contao;
+namespace Contao\PHPStan\Type;
 
-use Contao\TestCase\ContaoTestCase;
+use Contao\CoreBundle\Framework\ContaoFramework;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr\ClassConstFetch;
 use PhpParser\Node\Expr\MethodCall;
@@ -12,21 +12,19 @@ use PhpParser\Node\Name;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
-use PHPStan\Type\IntersectionType;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
-use PHPUnit\Framework\MockObject\MockObject;
 
-class ContaoTestCaseDynamicMethodReturnTypeExtension implements DynamicMethodReturnTypeExtension
+class ContaoFrameworkDynamicMethodReturnTypeExtension implements DynamicMethodReturnTypeExtension
 {
     public function getClass(): string
     {
-        return ContaoTestCase::class;
+        return ContaoFramework::class;
     }
 
     public function isMethodSupported(MethodReflection $methodReflection): bool
     {
-        return 'mockClassWithProperties' === $methodReflection->getName();
+        return 'createInstance' === $methodReflection->getName();
     }
 
     public function getTypeFromMethodCall(MethodReflection $methodReflection, MethodCall $methodCall, Scope $scope): Type
@@ -36,11 +34,7 @@ class ContaoTestCaseDynamicMethodReturnTypeExtension implements DynamicMethodRet
             $value = $argument->value;
 
             if ($value instanceof ClassConstFetch && $value->class instanceof Name) {
-                // see https://medium.com/@ondrejmirtes/union-types-vs-intersection-types-fd44a8eacbb
-                return new IntersectionType([
-                    new ObjectType((string) $value->class),
-                    new ObjectType(MockObject::class),
-                ]);
+                return new ObjectType((string) $value->class);
             }
         }
 

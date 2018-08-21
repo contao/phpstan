@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Tests\Contao;
+namespace Contao\PHPStan\Tests;
 
-use Oneup\PHPStan\Contao\Service;
+use Contao\PHPStan\Service;
 use PHPUnit\Framework\TestCase;
 
 class ServiceTest extends TestCase
@@ -25,7 +25,7 @@ class ServiceTest extends TestCase
 
     public function testCanBeInstantiated(): void
     {
-        $this->assertInstanceOf('Oneup\PHPStan\Contao\Service', $this->service);
+        $this->assertInstanceOf('Contao\PHPStan\Service', $this->service);
     }
 
     public function testReturnsValidId(): void

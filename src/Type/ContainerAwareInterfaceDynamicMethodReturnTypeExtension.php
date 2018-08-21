@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Type\Contao;
+namespace Contao\PHPStan\Type;
 
 use PHPStan\Reflection\MethodReflection;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;

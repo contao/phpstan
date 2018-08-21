@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneup\PHPStan\Reflection\Contao;
+namespace Contao\PHPStan\Reflection;
 
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\PropertiesClassReflectionExtension;
