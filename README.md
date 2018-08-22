@@ -7,25 +7,25 @@ This extension provides following features:
 
 * Provides correct return types for Contao services.
 
-[![Author](https://img.shields.io/badge/author-@1upgmbh-blue.svg?style=flat-square)](https://twitter.com/1upgmbh)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Travis CI](https://travis-ci.org/1up-lab/phpstan-contao.svg?style=flat-square&branch=master)](https://travis-ci.org/1up-lab/phpstan-contao)
-[![Coverage Status](https://coveralls.io/repos/github/1up-lab/phpstan-contao/badge.svg?style=flat-square&branch=master)](https://coveralls.io/github/1up-lab/phpstan-contao?branch=master)
-[![Total Downloads](https://poser.pugx.org/oneup/phpstan-contao/downloads?style=flat-square)](https://packagist.org/packages/oneup/phpstan-contao)
+[![](https://img.shields.io/travis/contao/phpstan/master.svg?style=flat-square)](https://travis-ci.org/contao/phpstan/)
+[![](https://img.shields.io/coveralls/contao/phpstan/master.svg?style=flat-square)](https://coveralls.io/github/contao/phpstan)
+[![](https://img.shields.io/packagist/v/contao/phpstan.svg?style=flat-square)](https://packagist.org/packages/contao/phpstan)
+[![](https://img.shields.io/packagist/dt/contao/phpstan.svg?style=flat-square)](https://packagist.org/packages/contao/phpstan)
+
 
 ## Usage
 
 To use this extension, require it in [Composer](https://getcomposer.org/):
 
 ```bash
-composer require --dev oneup/phpstan-contao
+composer require --dev contao/phpstan
 ```
 
 And include extension.neon in your project's PHPStan config:
 
 ```
 includes:
-    - vendor/oneup/phpstan-contao/extension.neon
+    - vendor/contao/phpstan/extension.neon
     - vendor/phpstan/phpstan-symfony/extension.neon
 
 parameters:
@@ -33,7 +33,7 @@ parameters:
         services_yml_path: %currentWorkingDirectory%/src/Resources/config/services.yml
 
     symfony:
-        container_xml_path: %currentWorkingDirectory%/vendor/oneup/phpstan-contao/var/cache/dev/appDevPHPStanProjectContainer.xml
+        container_xml_path: %currentWorkingDirectory%/vendor/contao/phpstan/var/cache/dev/appDevPHPStanProjectContainer.xml
 ```
 
 ## Limitations

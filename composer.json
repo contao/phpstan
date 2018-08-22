@@ -1,50 +1,46 @@
 {
-  "name": "oneup/phpstan-contao",
-  "description": "Contao Framework extensions and rules for PHPStan",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "David Greminger",
-      "homepage": "https://github.com/bytehead"
-    }
-  ],
-  "require": {
-    "php": "^7.1",
-    "phpstan/phpstan": "^0.10.2",
-    "phpstan/phpstan-symfony": "^0.10",
-    "symfony/debug": "^4.1",
-    "symfony/monolog-bundle": "^3.3",
-    "symfony/monolog-bridge": "^3.0 || ^4.0",
-    "symfony/templating": "^3.1 || ^4.0"
-  },
-  "require-dev": {
-    "contao/core-bundle": "^4.5.999",
-    "contao/test-case": "^1.1",
-    "friendsofphp/php-cs-fixer": "^2.12",
-    "lexik/maintenance-bundle": "^2.1.3",
-    "php-coveralls/php-coveralls": "^2.1",
-    "php-http/guzzle6-adapter": "^1.1",
-    "phpunit/phpunit": "^7.2",
-    "symfony/var-dumper": "^4.1"
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "autoload": {
-    "psr-4": {
-      "Oneup\\PHPStan\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Oneup\\PHPStan\\Tests\\": "tests/"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "support": {
-    "email": "hello@1up.io",
-    "issues": "https://github.com/1up-lab/phpstan-contao/issues",
-    "source": "https://github.com/1up-lab/phpstan-contao"
-  }
+    "name": "contao/phpstan",
+    "description": "Contao Framework extensions and rules for PHPStan",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "David Greminger",
+            "homepage": "https://github.com/bytehead"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "friendsofsymfony/http-cache-bundle": "^2.3",
+        "phpstan/phpstan": "^0.10.2",
+        "phpstan/phpstan-symfony": "^0.10",
+        "symfony/debug": "^4.1",
+        "symfony/monolog-bridge": "^3.0 || ^4.0",
+        "symfony/monolog-bundle": "^3.3",
+        "symfony/templating": "^3.1 || ^4.0"
+    },
+    "require-dev": {
+        "contao/core-bundle": "^4.5.999",
+        "contao/test-case": "^1.1",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "lexik/maintenance-bundle": "^2.1.3",
+        "php-coveralls/php-coveralls": "^2.1",
+        "php-http/guzzle6-adapter": "^1.1",
+        "phpunit/phpunit": "^7.2",
+        "symfony/var-dumper": "^4.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Contao\\PhpStan\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Contao\\PhpStan\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
