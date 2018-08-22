@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan\Tests;
+namespace Contao\PhpStan\Tests;
 
-use Contao\PHPStan\Service;
+use Contao\PhpStan\Service;
 use PHPUnit\Framework\TestCase;
 
 class ServiceTest extends TestCase
@@ -25,7 +25,7 @@ class ServiceTest extends TestCase
 
     public function testCanBeInstantiated(): void
     {
-        $this->assertInstanceOf('Contao\PHPStan\Service', $this->service);
+        $this->assertInstanceOf('Contao\PhpStan\Service', $this->service);
     }
 
     public function testReturnsValidId(): void

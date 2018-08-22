@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan;
+namespace Contao\PhpStan;
 
 use PhpParser\Node\Expr;
 use PHPStan\Analyser\Scope;

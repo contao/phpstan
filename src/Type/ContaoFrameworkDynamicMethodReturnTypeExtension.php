@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan\Type;
+namespace Contao\PhpStan\Type;
 
 use Contao\CoreBundle\Framework\ContaoFramework;
 use PhpParser\Node\Arg;

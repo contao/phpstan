@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan;
+namespace Contao\PhpStan;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;

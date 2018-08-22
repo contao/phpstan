@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan\Type;
+namespace Contao\PhpStan\Type;
 
-use Contao\PHPStan\Service;
-use Contao\PHPStan\ServiceHelper;
+use Contao\PhpStan\Service;
+use Contao\PhpStan\ServiceHelper;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;

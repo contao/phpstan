@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Contao\PHPStan\Tests;
+namespace Contao\PhpStan\Tests;
 
-use Contao\PHPStan\ServiceHelper;
+use Contao\PhpStan\ServiceHelper;
 use PHPUnit\Framework\TestCase;
 
 class ServiceHelperTest extends TestCase
@@ -13,7 +13,7 @@ class ServiceHelperTest extends TestCase
     {
         $serviceHelper = new ServiceHelper(__DIR__.'/Resources/config/empty_services.yml');
 
-        $this->assertInstanceOf('Contao\PHPStan\ServiceHelper', $serviceHelper);
+        $this->assertInstanceOf('Contao\PhpStan\ServiceHelper', $serviceHelper);
     }
 
     public function testEmptyServicesYml(): void

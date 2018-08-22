@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Contao\\PHPStan\\": "src/"
+            "Contao\\PhpStan\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Contao\\PHPStan\\Tests\\": "tests/"
+            "Contao\\PhpStan\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
