@@ -1,26 +1,26 @@
 services:
     -
-        class: Contao\PHPStan\Type\Contao\ContainerInterfaceDynamicMethodReturnTypeExtension
+        class: Contao\PhpStan\Type\Contao\ContainerInterfaceDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
-        class: Contao\PHPStan\Type\Contao\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-
-    -
-        class: Contao\PHPStan\Type\Contao\ContaoFrameworkDynamicMethodReturnTypeExtension
+        class: Contao\PhpStan\Type\Contao\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 
     -
-        class: Contao\PHPStan\Type\Contao\ContaoTestCaseDynamicMethodReturnTypeExtension
+        class: Contao\PhpStan\Type\Contao\ContaoFrameworkDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 
     -
-        class: Contao\PHPStan\Reflection\Contao\BackendTemplateClassReflectionExtension
+        class: Contao\PhpStan\Type\Contao\ContaoTestCaseDynamicMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    -
+        class: Contao\PhpStan\Reflection\Contao\BackendTemplateClassReflectionExtension
         tags:
             - phpstan.broker.propertiesClassReflectionExtension
 
-    - Contao\PHPStan\Contao\ServiceHelper(%contao.services_yml_path%)
+    - Contao\PhpStan\Contao\ServiceHelper(%contao.services_yml_path%)
