@@ -42,5 +42,9 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "support": {
+        "issues": "https://github.com/contao/phpstan/issues",
+        "source": "https://github.com/contao/phpstan"
+    }
 }
