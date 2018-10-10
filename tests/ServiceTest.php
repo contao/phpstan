@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Contao extension for PHPStan.
+ *
+ * (c) David Greminger
+ *
+ * @license MIT
+ */
+
 namespace Contao\PhpStan\Tests;
 
 use Contao\PhpStan\Service;
@@ -9,18 +17,16 @@ use PHPUnit\Framework\TestCase;
 
 class ServiceTest extends TestCase
 {
+    /**
+     * @var Service
+     */
     private $service;
 
-    public function setUp()/* The :void return type declaration that should be here would cause a BC issue */
+    public function setUp(): void
     {
-        $this->service = new Service(
-            'service.id',
-            null,
-            true,
-            false,
-            'service.alias',
-            false
-        );
+        parent::setUp();
+
+        $this->service = new Service('service.id', null, true, false, 'service.alias', false);
     }
 
     public function testCanBeInstantiated(): void

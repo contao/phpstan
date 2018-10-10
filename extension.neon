@@ -3,6 +3,7 @@ services:
         class: Contao\PhpStan\Type\ContainerInterfaceDynamicMethodReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
+
     -
         class: Contao\PhpStan\Type\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
         tags:

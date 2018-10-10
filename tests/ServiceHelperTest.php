@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Contao extension for PHPStan.
+ *
+ * (c) David Greminger
+ *
+ * @license MIT
+ */
+
 namespace Contao\PhpStan\Tests;
 
 use Contao\PhpStan\ServiceHelper;
@@ -11,14 +19,14 @@ class ServiceHelperTest extends TestCase
 {
     public function testCanBeInstantiated(): void
     {
-        $serviceHelper = new ServiceHelper(__DIR__.'/Resources/config/empty_services.yml');
+        $serviceHelper = new ServiceHelper(__DIR__.'/Fixtures/empty_services.yml');
 
         $this->assertInstanceOf('Contao\PhpStan\ServiceHelper', $serviceHelper);
     }
 
     public function testEmptyServicesYml(): void
     {
-        $serviceHelper = new ServiceHelper(__DIR__.'/Resources/config/empty_services.yml');
+        $serviceHelper = new ServiceHelper(__DIR__.'/Fixtures/empty_services.yml');
 
         $this->assertNull($serviceHelper->getService('foobar.id'));
     }

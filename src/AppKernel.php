@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Contao extension for PHPStan.
+ *
+ * (c) David Greminger
+ *
+ * @license MIT
+ */
+
 namespace Contao\PhpStan;
 
 use Contao\CoreBundle\ContaoCoreBundle;
@@ -29,7 +37,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = [
+        return [
             new FrameworkBundle(),
             new SecurityBundle(),
             new TwigBundle(),
@@ -46,8 +54,6 @@ class AppKernel extends Kernel
             new KnpMenuBundle(),
             new ContaoCoreBundle(),
         ];
-
-        return $bundles;
     }
 
     public function getRootDir()
@@ -75,6 +81,10 @@ class AppKernel extends Kernel
         parent::dumpContainer($cache, $container, $class, $baseClass);
 
         $filesystem = new \Symfony\Component\Filesystem\Filesystem();
-        $filesystem->dumpFile($this->getCacheDir().'/appDevPHPStanProjectContainer.xml', (new XmlDumper($container))->dump());
+
+        $filesystem->dumpFile(
+            $this->getCacheDir().'/appDevPHPStanProjectContainer.xml',
+            (new XmlDumper($container))->dump()
+        );
     }
 }

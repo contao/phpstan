@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Contao extension for PHPStan.
+ *
+ * (c) David Greminger
+ *
+ * @license MIT
+ */
+
 namespace Contao\PhpStan;
 
 use PhpParser\Node\Expr;

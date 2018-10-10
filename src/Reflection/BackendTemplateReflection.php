@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the Contao extension for PHPStan.
+ *
+ * (c) David Greminger
+ *
+ * @license MIT
+ */
+
 namespace Contao\PhpStan\Reflection;
 
 use PHPStan\Reflection\ClassReflection;
@@ -11,7 +19,9 @@ use PHPStan\Type\Type;
 
 class BackendTemplateReflection implements PropertyReflection
 {
-    /** @var ClassReflection */
+    /**
+     * @var ClassReflection
+     */
     private $declaringClass;
 
     public function __construct(ClassReflection $declaringClass)

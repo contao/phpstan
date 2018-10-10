@@ -1,7 +1,7 @@
 {
     "name": "contao/phpstan",
-    "description": "Contao Framework extensions and rules for PHPStan",
-    "license": "LGPL-3.0-or-later",
+    "description": "Contao extension for PHPStan",
+    "license": "MIT",
     "authors": [
         {
             "name": "David Greminger",
@@ -26,6 +26,7 @@
         "php-coveralls/php-coveralls": "^2.1",
         "php-http/guzzle6-adapter": "^1.1",
         "phpunit/phpunit": "^7.2",
+        "sensio/framework-extra-bundle": "^5.0",
         "symfony/var-dumper": "^4.1"
     },
     "config": {

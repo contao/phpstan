@@ -1,4 +1,6 @@
-.idea
-composer.lock
-/var
-/vendor
+# Composer
+/composer.lock
+/vendor/
+
+# Generated folders
+/var/
