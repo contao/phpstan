@@ -12,7 +12,7 @@
         "php": "^7.1",
         "friendsofsymfony/http-cache-bundle": "^2.3",
         "phpstan/phpstan": "^0.10.2",
-        "phpstan/phpstan-symfony": "^0.10",
+        "phpstan/phpstan-symfony": "^0.10.2",
         "symfony/debug": "^4.1",
         "symfony/monolog-bridge": "^3.0 || ^4.0",
         "symfony/monolog-bundle": "^3.3",
