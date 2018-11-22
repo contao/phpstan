@@ -14,9 +14,9 @@
         "phpstan/phpstan": "^0.10.2",
         "phpstan/phpstan-symfony": "^0.10.2",
         "symfony/debug": "^4.1",
-        "symfony/monolog-bridge": "^3.0 || ^4.0",
+        "symfony/monolog-bridge": "^4.1",
         "symfony/monolog-bundle": "^3.3",
-        "symfony/templating": "^3.1 || ^4.0"
+        "symfony/templating": "^4.1"
     },
     "require-dev": {
         "contao/core-bundle": "^4.6",
@@ -42,8 +42,6 @@
             "Contao\\PhpStan\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "support": {
         "issues": "https://github.com/contao/phpstan/issues",
         "source": "https://github.com/contao/phpstan"
