@@ -21,7 +21,6 @@ use Knp\Bundle\TimeBundle\KnpTimeBundle;
 use Lexik\Bundle\MaintenanceBundle\LexikMaintenanceBundle;
 use Nelmio\CorsBundle\NelmioCorsBundle;
 use Scheb\TwoFactorBundle\SchebTwoFactorBundle;
-use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MonologBundle\MonologBundle;
 use Symfony\Bundle\SecurityBundle\SecurityBundle;
@@ -47,7 +46,6 @@ class AppKernel extends Kernel
             new DoctrineCacheBundle(),
             new LexikMaintenanceBundle(),
             new NelmioCorsBundle(),
-            new SensioFrameworkExtraBundle(),
             new FOSHttpCacheBundle(),
             new SchebTwoFactorBundle(),
             new KnpTimeBundle(),
