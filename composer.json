@@ -11,8 +11,8 @@
     "require": {
         "php": "^7.1",
         "friendsofsymfony/http-cache-bundle": "^2.6",
-        "phpstan/phpstan": "^0.10.2",
-        "phpstan/phpstan-symfony": "^0.10.2",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-symfony": "^0.11",
         "symfony/debug": "^4.1",
         "symfony/monolog-bridge": "^4.1",
         "symfony/monolog-bundle": "^3.3",
