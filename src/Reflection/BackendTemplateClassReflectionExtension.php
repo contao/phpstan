@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Contao\PhpStan\Reflection;
 
+use Contao\BackendTemplate;
 use PHPStan\Reflection\ClassReflection;
 use PHPStan\Reflection\PropertiesClassReflectionExtension;
 use PHPStan\Reflection\PropertyReflection;
@@ -22,7 +23,7 @@ class BackendTemplateClassReflectionExtension implements PropertiesClassReflecti
     {
         return
             'Contao\BackendTemplate' === $classReflection->getName()
-            || $classReflection->isSubclassOf('Contao\BackendTemplate')
+            || $classReflection->isSubclassOf(BackendTemplate::class)
         ;
     }
 

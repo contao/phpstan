@@ -17,13 +17,6 @@ use PHPUnit\Framework\TestCase;
 
 class ServiceHelperTest extends TestCase
 {
-    public function testCanBeInstantiated(): void
-    {
-        $serviceHelper = new ServiceHelper(__DIR__.'/Fixtures/empty_services.yml');
-
-        $this->assertInstanceOf('Contao\PhpStan\ServiceHelper', $serviceHelper);
-    }
-
     public function testEmptyServicesYml(): void
     {
         $serviceHelper = new ServiceHelper(__DIR__.'/Fixtures/empty_services.yml');

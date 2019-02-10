@@ -29,11 +29,6 @@ class ServiceTest extends TestCase
         $this->service = new Service('service.id', null, true, false, 'service.alias', false);
     }
 
-    public function testCanBeInstantiated(): void
-    {
-        $this->assertInstanceOf('Contao\PhpStan\Service', $this->service);
-    }
-
     public function testReturnsValidId(): void
     {
         $this->assertSame('service.id', $this->service->getId());

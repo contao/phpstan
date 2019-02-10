@@ -29,9 +29,6 @@
         "sensio/framework-extra-bundle": "^5.0",
         "symfony/var-dumper": "^4.1"
     },
-    "config": {
-        "sort-packages": true
-    },
     "autoload": {
         "psr-4": {
             "Contao\\PhpStan\\": "src/"
