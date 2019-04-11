@@ -32,11 +32,11 @@ final class ServiceHelper
 
         $yml = Yaml::parseFile($servicesYml);
 
-        if (\is_array($yml) && array_key_exists('services', $yml)) {
+        if (\is_array($yml) && \array_key_exists('services', $yml)) {
             $services = $yml['services'];
 
             foreach ($services as $serviceId => $parameters) {
-                if (\is_array($parameters) && !array_key_exists('class', $parameters)) {
+                if (\is_array($parameters) && !\array_key_exists('class', $parameters)) {
                     continue;
                 }
 
@@ -58,7 +58,7 @@ final class ServiceHelper
 
             foreach ($aliases as $service) {
                 $alias = $service->getAlias();
-                if (null !== $alias && !array_key_exists($alias, $this->services)) {
+                if (null !== $alias && !\array_key_exists($alias, $this->services)) {
                     continue;
                 }
 
