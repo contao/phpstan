@@ -1,5 +1,6 @@
 {
     "name": "contao/phpstan",
+    "type": "phpstan-extension",
     "description": "Contao extension for PHPStan",
     "license": "MIT",
     "authors": [
@@ -28,6 +29,13 @@
         "phpunit/phpunit": "^7.2",
         "sensio/framework-extra-bundle": "^5.0",
         "symfony/var-dumper": "^4.1"
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
