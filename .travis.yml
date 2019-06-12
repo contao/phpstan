@@ -13,11 +13,10 @@ env:
 jobs:
   include:
     - stage: test
-      name: "Test installing the lowest dependencies"
-      php: 7.2
+      name: 'Test installing the lowest dependencies'
+      php: 7.3
       install:
         - phpenv config-rm xdebug.ini || true
-        - composer update --no-interaction --no-suggest
         - composer update --prefer-lowest --prefer-stable --no-interaction --no-suggest
       script:
         - php vendor/bin/phpunit
@@ -52,8 +51,19 @@ jobs:
       after_script:
         - php vendor/bin/php-coveralls -o coveralls-upload.json -x coverage.xml
 
+    - stage: test
+      if: 'type = cron'
+      php: 7.4snapshot
+      install:
+        - phpenv config-rm xdebug.ini || true
+        - composer update --no-interaction --no-suggest
+      script:
+        - php vendor/bin/phpunit
+        - php vendor/bin/phpstan analyse src tests --level=7
+
     # Ignore the platform requirements for the upcoming PHP version
     - stage: test
+      if: 'type = cron'
       php: nightly
       install:
         - phpenv config-rm xdebug.ini || true
@@ -63,4 +73,5 @@ jobs:
         - php vendor/bin/phpstan analyse src tests --level=7
 
   allow_failures:
+    - php: 7.4snapshot
     - php: nightly
