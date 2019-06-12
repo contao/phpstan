@@ -93,9 +93,14 @@ final class ServiceHelper
 
     private function createKernel(): void
     {
+        putenv('DB_HOST=');
+        putenv('DB_USER=');
+        putenv('DB_PASS=');
+        putenv('DB_NAME=');
+
         Debug::enable();
 
-        $kernel = new AppKernel('dev', true);
+        $kernel = new AppKernel('test', true);
         $kernel->boot();
     }
 }
