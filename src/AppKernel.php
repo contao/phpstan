@@ -15,6 +15,7 @@ namespace Contao\PhpStan;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\XmlDumper;
+use Symfony\Component\Filesystem\Filesystem;
 
 class AppKernel extends \Contao\CoreBundle\Tests\Functional\app\AppKernel
 {
@@ -22,10 +23,10 @@ class AppKernel extends \Contao\CoreBundle\Tests\Functional\app\AppKernel
     {
         parent::dumpContainer($cache, $container, $class, $baseClass);
 
-        $filesystem = new \Symfony\Component\Filesystem\Filesystem();
+        $filesystem = new Filesystem();
 
         $filesystem->dumpFile(
-            $this->getCacheDir().'/appDevPHPStanProjectContainer.xml',
+            $this->getCacheDir().'/appTestDebugProjectContainer.xml',
             (new XmlDumper($container))->dump()
         );
     }
