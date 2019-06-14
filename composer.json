@@ -14,10 +14,10 @@
         "friendsofsymfony/http-cache-bundle": "^2.6",
         "phpstan/phpstan": "^0.11",
         "phpstan/phpstan-symfony": "^0.11",
-        "symfony/debug": "^4.1",
-        "symfony/monolog-bridge": "^4.1",
+        "symfony/debug": "^4.2",
+        "symfony/monolog-bridge": "^4.2",
         "symfony/monolog-bundle": "^3.3",
-        "symfony/templating": "^4.1"
+        "symfony/templating": "^4.2"
     },
     "require-dev": {
         "contao/core-bundle": "^4.7",
@@ -29,7 +29,7 @@
         "php-http/guzzle6-adapter": "^1.1",
         "phpunit/phpunit": "^7.2",
         "sensio/framework-extra-bundle": "^5.0",
-        "symfony/var-dumper": "^4.1"
+        "symfony/var-dumper": "^4.2"
     },
     "extra": {
         "phpstan": {
