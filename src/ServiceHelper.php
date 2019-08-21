@@ -12,10 +12,10 @@ declare(strict_types=1);
 
 namespace Contao\PhpStan;
 
+use Contao\CoreBundle\Tests\Functional\app\AppKernel;
 use PhpParser\Node\Expr;
 use PHPStan\Analyser\Scope;
 use PHPStan\Type\TypeUtils;
-use Symfony\Component\Debug\Debug;
 use Symfony\Component\Yaml\Yaml;
 
 final class ServiceHelper
@@ -29,7 +29,6 @@ final class ServiceHelper
     {
         /** @var Service[] $aliases */
         $aliases = [];
-
         $yml = Yaml::parseFile($servicesYml);
 
         if (\is_array($yml) && \array_key_exists('services', $yml)) {
@@ -98,9 +97,7 @@ final class ServiceHelper
         putenv('DB_PASS=');
         putenv('DB_NAME=');
 
-        Debug::enable();
-
-        $kernel = new AppKernel('test', true);
+        $kernel = new AppKernel('phpstan', true);
         $kernel->boot();
     }
 }

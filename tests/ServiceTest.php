@@ -22,7 +22,7 @@ class ServiceTest extends TestCase
      */
     private $service;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 

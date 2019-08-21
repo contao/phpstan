@@ -1,8 +1,0 @@
-parameters:
-    bootstrap: %currentWorkingDirectory%/vendor/autoload.php
-
-    excludes_analyse:
-
-    ignoreErrors:
-
-    reportUnmatchedIgnoredErrors: false

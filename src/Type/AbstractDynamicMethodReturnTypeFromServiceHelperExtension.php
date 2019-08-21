@@ -17,6 +17,7 @@ use Contao\PhpStan\ServiceHelper;
 use PhpParser\Node\Expr\MethodCall;
 use PHPStan\Analyser\Scope;
 use PHPStan\Reflection\MethodReflection;
+use PHPStan\Reflection\ParametersAcceptorSelector;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
@@ -36,11 +37,13 @@ abstract class AbstractDynamicMethodReturnTypeFromServiceHelperExtension impleme
     public function getTypeFromMethodCall(MethodReflection $methodReflection, MethodCall $methodCall, Scope $scope): Type
     {
         if (0 === \count($methodCall->args)) {
-            return \PHPStan\Reflection\ParametersAcceptorSelector::selectFromArgs(
+            $acceptor = ParametersAcceptorSelector::selectFromArgs(
                 $scope,
                 $methodCall->args,
                 $methodReflection->getVariants()
-            )->getReturnType();
+            );
+
+            return $acceptor->getReturnType();
         }
 
         $serviceId = ServiceHelper::getServiceIdFromNode($methodCall->args[0]->value, $scope);
