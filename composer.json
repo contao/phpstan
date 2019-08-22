@@ -20,8 +20,8 @@
         "symfony/templating": "^4.2"
     },
     "require-dev": {
-        "contao/core-bundle": "^4.8",
-        "contao/news-bundle": "^4.8",
+        "contao/core-bundle": "^4.8.1",
+        "contao/news-bundle": "^4.8.1",
         "contao/test-case": "^3.0",
         "friendsofphp/php-cs-fixer": "^2.14",
         "lexik/maintenance-bundle": "^2.1.3",
