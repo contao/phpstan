@@ -43,7 +43,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Contao\\PhpStan\\": "src/"
+            "Contao\\PhpStan\\": "src/",
+            "Contao\\CoreBundle\\Tests\\": "../../contao/core-bundle/tests/"
         }
     },
     "autoload-dev": {
