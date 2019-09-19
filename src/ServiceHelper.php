@@ -96,6 +96,7 @@ final class ServiceHelper
         putenv('DB_USER=');
         putenv('DB_PASS=');
         putenv('DB_NAME=');
+        putenv('DATABASE_URL=');
 
         $kernel = new AppKernel('phpstan', true);
         $kernel->boot();
