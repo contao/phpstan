@@ -1,27 +1,27 @@
+parameters:
+    universalObjectCratesClasses:
+        - Contao\Model
+        - Contao\Templates
+
 services:
-    -
-        class: Contao\PhpStan\Type\ContainerInterfaceDynamicMethodReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-
-    -
-        class: Contao\PhpStan\Type\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-
-    -
-        class: Contao\PhpStan\Type\ContaoFrameworkDynamicMethodReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-
-    -
-        class: Contao\PhpStan\Type\ContaoTestCaseDynamicMethodReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-
-    -
-        class: Contao\PhpStan\Reflection\BackendTemplateClassReflectionExtension
-        tags:
-            - phpstan.broker.propertiesClassReflectionExtension
-
     - Contao\PhpStan\ServiceHelper(%contao.services_yml_path%)
+
+    - class: Contao\PhpStan\Type\ContainerInterfaceDynamicMethodReturnTypeExtension
+      tags:
+          - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    - class: Contao\PhpStan\Type\ContainerAwareInterfaceDynamicMethodReturnTypeExtension
+      tags:
+          - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    - class: Contao\PhpStan\Type\ContaoFrameworkDynamicMethodReturnTypeExtension
+      tags:
+          - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    - class: Contao\PhpStan\Type\ContaoTestCaseDynamicMethodReturnTypeExtension
+      tags:
+          - phpstan.broker.dynamicMethodReturnTypeExtension
+
+    - class: Contao\PhpStan\Reflection\BackendTemplateClassReflectionExtension
+      tags:
+          - phpstan.broker.propertiesClassReflectionExtension
