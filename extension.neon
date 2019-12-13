@@ -3,6 +3,11 @@ parameters:
         - Contao\Model
         - Contao\Templates
 
+parametersSchema:
+    contao: structure([
+        services_yml_path: schema(string(), nullable())
+    ])
+
 services:
     - Contao\PhpStan\ServiceHelper(%contao.services_yml_path%)
 

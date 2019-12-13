@@ -21,8 +21,7 @@ class BackendTemplateClassReflectionExtension implements PropertiesClassReflecti
 {
     public function hasProperty(ClassReflection $classReflection, string $propertyName): bool
     {
-        return
-            'Contao\BackendTemplate' === $classReflection->getName()
+        return 'Contao\BackendTemplate' === $classReflection->getName()
             || $classReflection->isSubclassOf(BackendTemplate::class)
         ;
     }
