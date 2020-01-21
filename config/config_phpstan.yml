@@ -2,7 +2,6 @@ imports:
     - { resource: ../vendor/contao/manager-bundle/src/Resources/skeleton/config/security.yml }
 
 parameters:
-    locale: en
     secret: s3cr3t
     mailer_transport: ~
 
