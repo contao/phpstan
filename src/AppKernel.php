@@ -33,8 +33,6 @@ use Symfony\Component\HttpKernel\Kernel;
 class AppKernel extends Kernel
 {
     /**
-     * {@inheritdoc}
-     *
      * @return array<Bundle>
      */
     public function registerBundles(): array

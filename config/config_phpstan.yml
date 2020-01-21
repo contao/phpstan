@@ -17,4 +17,4 @@ doctrine:
     dbal:
         default_connection: default
         connections:
-            default:
+            default: ~
