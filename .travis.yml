@@ -22,14 +22,6 @@ jobs:
         - php vendor/bin/phpstan analyse src tests --level=7
 
     - stage: test
-      php: 7.1
-      install:
-        - composer update --no-interaction --no-suggest
-      script:
-        - php vendor/bin/phpunit
-        - php vendor/bin/phpstan analyse src tests --level=7
-
-    - stage: test
       php: 7.2
       install:
         - composer update --no-interaction --no-suggest
