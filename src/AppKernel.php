@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace Contao\PhpStan;
 
 use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\NewsBundle\ContaoNewsBundle;
+use Contao\ManagerBundle\ContaoManagerBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Knp\Bundle\MenuBundle\KnpMenuBundle;
 use Knp\Bundle\TimeBundle\KnpTimeBundle;
@@ -49,7 +49,7 @@ class AppKernel extends Kernel
             new KnpMenuBundle(),
             new CmfRoutingBundle(),
             new ContaoCoreBundle(),
-            new ContaoNewsBundle(),
+            new ContaoManagerBundle(),
         ];
     }
 

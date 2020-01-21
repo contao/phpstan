@@ -1,43 +1,21 @@
 imports:
-    - { resource: security.yml }
+    - { resource: ../vendor/contao/manager-bundle/src/Resources/skeleton/config/security.yml }
 
 parameters:
     locale: en
+    secret: s3cr3t
+    mailer_transport: ~
 
 framework:
-    test: ~
-    esi: { enabled: true }
-    translator: { fallbacks: ['%locale%'] }
-    secret: '%env(APP_SECRET)%'
+    secret: '%secret%'
     router:
-        resource: '%kernel.project_dir%/../src/Resources/config/routing.yml'
+        resource: ../vendor/contao/core-bundle/src/Resources/config/routing.yml
         strict_requirements: '%kernel.debug%'
-    csrf_protection: ~
-    default_locale: '%locale%'
     session:
         storage_id: session.storage.mock_file
-    fragments: { path: /_fragment }
-
-twig:
-    debug: '%kernel.debug%'
-    strict_variables: '%kernel.debug%'
 
 doctrine:
     dbal:
         default_connection: default
         connections:
             default:
-                driver: pdo_mysql
-                url: '%env(DATABASE_URL)%'
-                charset: utf8mb4
-                default_table_options:
-                    charset: utf8mb4
-                    collate: utf8mb4_unicode_ci
-                    engine: InnoDB
-    orm:
-        auto_mapping: true
-        auto_generate_proxy_classes: true
-
-contao:
-    localconfig:
-        licenseAccepted: true
