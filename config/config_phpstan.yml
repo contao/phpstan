@@ -1,5 +1,5 @@
 imports:
-    - { resource: ../vendor/contao/manager-bundle/src/Resources/skeleton/config/security.yml }
+    - { resource: security.yml }
 
 parameters:
     secret: s3cr3t
