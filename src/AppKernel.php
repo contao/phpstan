@@ -33,6 +33,8 @@ use Symfony\Component\HttpKernel\Kernel;
 class AppKernel extends Kernel
 {
     /**
+     * {@inheritdoc}
+     *
      * @return array<Bundle>
      */
     public function registerBundles(): array
@@ -53,6 +55,9 @@ class AppKernel extends Kernel
         ];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getProjectDir(): string
     {
         return \dirname(__DIR__);
@@ -60,29 +65,39 @@ class AppKernel extends Kernel
 
     /**
      * {@inheritdoc}
-     *
-     * @deprecated since Symfony 4.2, use getProjectDir() instead
      */
     public function getRootDir(): string
     {
         return __DIR__;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getCacheDir(): string
     {
         return \dirname(__DIR__).'/var/cache/'.$this->environment;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getLogDir(): string
     {
         return \dirname(__DIR__).'/var/logs';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function registerContainerConfiguration(LoaderInterface $loader): void
     {
         $loader->load(\dirname(__DIR__).'/config/config_'.$this->environment.'.yml');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function build(ContainerBuilder $container): void
     {
         $container->register('monolog.logger.contao', NullLogger::class);
