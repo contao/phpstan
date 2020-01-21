@@ -21,7 +21,7 @@
         "symfony/templating": "^4.3"
     },
     "require-dev": {
-        "contao/core-bundle": "^4.8.1",
+        "contao/core-bundle": "^4.9@RC",
         "contao/test-case": "^3.0",
         "friendsofphp/php-cs-fixer": "^2.14",
         "lexik/maintenance-bundle": "^2.1.3",

@@ -18,3 +18,4 @@ doctrine:
         default_connection: default
         connections:
             default: ~
+    orm: ~
