@@ -3,6 +3,8 @@ parameters:
         - Contao\Model
         - Contao\Templates
 
+    bootstrap: bootstrap.php
+
 parametersSchema:
     contao: structure([
         services_yml_path: schema(string(), nullable())
