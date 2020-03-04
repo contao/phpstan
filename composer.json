@@ -60,6 +60,22 @@
             "Contao\\CoreBundle\\Tests\\": "vendor/contao/core-bundle/tests/"
         }
     },
+    "scripts": {
+        "all": [
+            "@unit-tests",
+            "@cs-fixer",
+            "@phpstan"
+        ],
+        "cs-fixer": [
+            "vendor/bin/php-cs-fixer fix src -vvv --dry-run --ansi"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyse src tests --level=8 --ansi"
+        ],
+        "unit-tests": [
+            "vendor/bin/phpunit --colors=always"
+        ]
+    },
     "support": {
         "issues": "https://github.com/contao/phpstan/issues",
         "source": "https://github.com/contao/phpstan"
