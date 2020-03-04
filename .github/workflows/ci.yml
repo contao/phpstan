@@ -78,7 +78,7 @@ jobs:
               run: vendor/bin/php-cs-fixer fix src --dry-run --ansi
 
             - name: Analyze the code
-              run: vendor/bin/phpstan analyse src tests --level=8 --no-progress
+              run: vendor/bin/phpstan analyse src tests --level=max --no-progress
 
     tests:
         name: PHP ${{ matrix.php }}
