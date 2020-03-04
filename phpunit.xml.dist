@@ -10,7 +10,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Contao extension for PHPStan">
+        <testsuite name="unit">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
