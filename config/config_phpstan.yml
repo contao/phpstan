@@ -1,0 +1,21 @@
+imports:
+    - { resource: security.yml }
+
+parameters:
+    secret: s3cr3t
+    mailer_transport: ~
+
+framework:
+    secret: '%secret%'
+    router:
+        resource: ../vendor/contao/core-bundle/src/Resources/config/routing.yml
+        strict_requirements: '%kernel.debug%'
+    session:
+        storage_id: session.storage.mock_file
+
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default: ~
+    orm: ~
