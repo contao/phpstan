@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Contao\PhpStan;
 
+use Contao\CoreBundle\Tests\Functional\app\AppKernel;
 use PhpParser\Node\Expr;
 use PHPStan\Analyser\Scope;
 use PHPStan\Type\TypeUtils;
