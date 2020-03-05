@@ -4,3 +4,6 @@
 
 # Generated folders
 /var/
+
+# Generated files
+.phpunit.result.cache
