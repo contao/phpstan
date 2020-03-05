@@ -7,10 +7,10 @@ This extension provides following features:
 
 * Provides correct return types for Contao services.
 
-<a href="https://github.com/contao/phpstan/actions"><img src="https://img.shields.io/github/workflow/status/contao/phpstan/CI/master.svg" alt="GitHub"></a>
+<a href="https://github.com/contao/phpstan/actions"><img src="https://img.shields.io/github/workflow/status/contao/phpstan/CI" alt="GitHub"></a>
 <a href="https://codecov.io/gh/contao/phpstan"><img src="https://codecov.io/gh/contao/phpstan/branch/master/graph/badge.svg" /></a>
-<a href="https://packagist.org/packages/contao/phpstan"><img src="https://img.shields.io/packagist/v/contao/phpstan.svg?style=flat-square" /></a>
-<a href="https://packagist.org/packages/contao/phpstan"><img src="https://img.shields.io/packagist/dt/contao/phpstan.svg?style=flat-square" /></a>
+<a href="https://packagist.org/packages/contao/phpstan"><img src="https://img.shields.io/packagist/v/contao/phpstan.svg" /></a>
+<a href="https://packagist.org/packages/contao/phpstan"><img src="https://img.shields.io/packagist/dt/contao/phpstan.svg" /></a>
 
 
 ## Usage
