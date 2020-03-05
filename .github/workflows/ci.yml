@@ -75,7 +75,7 @@ jobs:
               run: composer install --no-interaction --no-suggest
 
             - name: Check the coding style
-              run: vendor/bin/php-cs-fixer fix src --dry-run --ansi
+              run: vendor/bin/php-cs-fixer fix src --diff --diff-format=udiff --dry-run --ansi
 
             - name: Analyze the code
               run: vendor/bin/phpstan analyse src tests --level=max --no-progress
