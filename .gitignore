@@ -5,5 +5,9 @@
 # Generated folders
 /var/
 
-# Generated files
-.phpunit.result.cache
+# PhpUnit
+/.phpunit.result.cache
+/phpunit.xml
+
+# CS fixer
+/.php_cs.cache
