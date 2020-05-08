@@ -29,7 +29,7 @@ final class ServiceHelper
     {
         /** @var Service[] $aliases */
         $aliases = [];
-        $yml = Yaml::parseFile($servicesYml, Yaml::PARSE_CONSTANT | YAML::PARSE_CUSTOM_TAGS);
+        $yml = Yaml::parseFile($servicesYml, Yaml::PARSE_CONSTANT | Yaml::PARSE_CUSTOM_TAGS);
 
         if (\is_array($yml) && \array_key_exists('services', $yml)) {
             $services = $yml['services'];

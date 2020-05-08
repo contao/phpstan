@@ -2,12 +2,12 @@
 /composer.lock
 /vendor/
 
-# Generated folders
-/var/
-
 # PhpUnit
 /.phpunit.result.cache
 /phpunit.xml
 
 # CS fixer
 /.php_cs.cache
+
+# Generated folders
+/var/

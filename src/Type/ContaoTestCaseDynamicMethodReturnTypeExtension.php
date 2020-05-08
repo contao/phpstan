@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Contao\PhpStan\Type;
 
 use Contao\TestCase\ContaoTestCase;
-use PhpParser\Node\Arg;
 use PhpParser\Node\Expr\ClassConstFetch;
 use PhpParser\Node\Expr\MethodCall;
 use PhpParser\Node\Name;
@@ -39,7 +38,6 @@ class ContaoTestCaseDynamicMethodReturnTypeExtension implements DynamicMethodRet
 
     public function getTypeFromMethodCall(MethodReflection $methodReflection, MethodCall $methodCall, Scope $scope): Type
     {
-        /** @var Arg $argument */
         foreach ($methodCall->args as $argument) {
             $value = $argument->value;
 
