@@ -3,7 +3,8 @@ parameters:
         - Contao\Model
         - Contao\Templates
 
-    bootstrap: bootstrap.php
+    bootstrapFiles:
+        - bootstrap.php
 
 parametersSchema:
     contao: structure([
