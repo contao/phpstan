@@ -15,6 +15,7 @@
         "phpstan/phpstan-phpunit": "^0.12",
         "phpstan/phpstan-symfony": "^0.12",
         "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/monolog-bundle": "^3.3",
         "symfony/yaml": "^4.4 || ^5.0"
     },
     "require-dev": {
@@ -22,8 +23,7 @@
         "contao/news-bundle": "^4.9",
         "contao/test-case": "^3.0 || ^4.0",
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpunit/phpunit": "^8.4",
-        "symfony/monolog-bundle": "^3.3"
+        "phpunit/phpunit": "^8.4"
     },
     "config": {
         "preferred-install": {
