@@ -85,6 +85,29 @@ jobs:
             - name: Run the unit tests
               run: vendor/bin/phpunit --colors=always
 
+    test-php-8:
+        name: PHP 8.0
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 8.0
+                  extensions: dom, fileinfo, filter, gd, hash, intl, json, mbstring, pcre, pdo_mysql, zlib
+                  tools: prestissimo, flex
+                  coverage: none
+
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Install the dependencies
+              run: |
+                  composer self-update --2
+                  composer install --no-interaction --no-suggest --ignore-platform-req=php
+
+            - name: Run the unit tests
+              run: vendor/bin/phpunit --colors=always
+
     prefer-lowest:
         name: Prefer Lowest
         runs-on: ubuntu-latest
